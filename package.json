@@ -1,0 +1,33 @@
+{
+  "name": "zap-gpt",
+  "version": "2.0.0",
+  "main": "index.cjs",
+  "scripts": {
+    "config": "node ./setup.js",
+    "dev": "node ./index.cjs",
+    "start": "npx pm2 start ./index.cjs --name zap-gpt --no-daemon",
+    "stop": "npx pm2 delete zap-gpt"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Marcus Gonçalves",
+    "email": "marcusgoncalves067@gmail.com"
+  },
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.2.1",
+    "@wppconnect-team/wppconnect": "1.29.0",
+    "axios": "^1.6.5",
+    "csv-stringify": "^6.4.5",
+    "dotenv": "^16.3.2",
+    "inquirer": "^9.2.15",
+    "openai": "^4.24.2"
+  },
+  "devDependencies": {
+    "pm2": "^5.3.1"
+  }
+}
